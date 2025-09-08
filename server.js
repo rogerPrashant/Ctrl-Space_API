@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const PORT = 3000;
+const PORT = "https://ctrl-space-api.onrender.com/api/data";
 
 
 const dataPath = path.join(__dirname, "data.json");
