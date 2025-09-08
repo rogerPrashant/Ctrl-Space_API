@@ -1,0 +1,154 @@
+{
+  "mission": {
+    "name": "Intercept 3I/ATLAS",
+    "spacecraft": "Juno",
+    "launch_date": "2011-08-05",
+    "maneuver_date": "2025-09-10T00:00:00Z",
+    "intercept_date": "2026-03-14T00:00:00Z",
+    "deltaV_required_kms": 2.675,
+    "closest_approach_km": 53600000,
+    "objectives": [
+      "Perform Jupiter Oberth maneuver to adjust trajectory.",
+      "Intercept 3I/ATLAS at closest approach near Jupiter.",
+      "Collect high-resolution imagery and spectroscopic data.",
+      "Measure magnetic field interactions and coma activity.",
+      "Transmit data back to Earth within mission lifetime."
+    ],
+    "timeline": [
+      {"event": "Trajectory Burn", "date": "2025-09-10", "status": "Scheduled"},
+      {"event": "Jupiter Gravity Assist", "date": "2025-11-01", "status": "Planned"},
+      {"event": "Intercept", "date": "2026-03-14", "status": "Planned"},
+      {"event": "Data Transmission", "date": "2026-04-01", "status": "Pending"}
+    ]
+  },
+
+  "spacecraft": {
+    "name": "Juno",
+    "status": "OPERATIONAL",
+    "fuel_remaining_kg": 120,
+    "power_status": {
+      "solar_array_output_watts": 430,
+      "battery_level_percent": 78,
+      "power_consumption_watts": 400
+    },
+    "thermal_status": {
+      "average_temp_celsius": -45,
+      "critical_components": {
+        "engine": -20,
+        "camera": -10,
+        "spectrometer": -15
+      }
+    },
+    "comms": {
+      "antenna_status": "Nominal",
+      "bitrate_kbps": 256,
+      "signal_delay_minutes": 42
+    },
+    "instruments": [
+      "JunoCam",
+      "Magnetometer",
+      "Infrared Spectrometer",
+      "Microwave Radiometer",
+      "Plasma Wave Instrument"
+    ],
+    "telemetry": [
+      {
+        "timestamp": "2025-09-07T12:00:00Z",
+        "position_km": [1250000, -540000, 210000],
+        "velocity_kms": [32.1, 5.6, -1.2],
+        "fuel_remaining_kg": 120,
+        "battery_percent": 78,
+        "health": "Nominal"
+      },
+      {
+        "timestamp": "2025-10-15T12:00:00Z",
+        "position_km": [1400000, -600000, 250000],
+        "velocity_kms": [34.5, 5.1, -1.0],
+        "fuel_remaining_kg": 115,
+        "battery_percent": 76,
+        "health": "Nominal"
+      },
+      {
+        "timestamp": "2026-01-20T12:00:00Z",
+        "position_km": [2800000, 900000, -400000],
+        "velocity_kms": [38.0, -1.5, 0.3],
+        "fuel_remaining_kg": 112,
+        "battery_percent": 74,
+        "health": "Nominal"
+      },
+      {
+        "timestamp": "2026-03-14T00:00:00Z",
+        "position_km": [3600000, 1100000, -700000],
+        "velocity_kms": [40.2, -2.3, 0.5],
+        "fuel_remaining_kg": 110,
+        "battery_percent": 72,
+        "health": "Nominal"
+      }
+    ]
+  },
+
+  "target": {
+    "designation": "C/2025 N1 (ATLAS)",
+    "type": "Interstellar Comet",
+    "discovery": {
+      "date": "2025-07-01",
+      "observatory": "ATLAS Survey, Chile",
+      "discoverer": "Alan Fitzsimmons et al."
+    },
+    "perihelion_date": "2025-10-29",
+    "perihelion_distance_au": 1.36,
+    "eccentricity": 1.03,
+    "inclination_degrees": 67.4,
+    "estimated_diameter_km": [0.32, 5.6],
+    "absolute_magnitude": 12.3,
+    "albedo": 0.04,
+    "composition": {
+      "CO2": "rich",
+      "H2O": "trace",
+      "CO": "trace",
+      "HCN": "trace",
+      "Ni": "trace"
+    },
+    "trajectory": [
+      {
+        "date": "2025-09-01",
+        "position_km": [4000000, 2100000, -800000],
+        "velocity_kms": [-12.5, 3.2, 1.8]
+      },
+      {
+        "date": "2025-12-01",
+        "position_km": [4200000, 2200000, -850000],
+        "velocity_kms": [-13.0, 3.0, 1.7]
+      },
+      {
+        "date": "2026-01-20",
+        "position_km": [3900000, 1800000, -750000],
+        "velocity_kms": [-13.6, 2.8, 1.6]
+      },
+      {
+        "date": "2026-03-14",
+        "position_km": [3620000, 1120000, -710000],
+        "velocity_kms": [-14.2, 2.5, 1.5]
+      }
+    ]
+  },
+
+  "intercept": {
+    "event_date": "2026-03-14T00:00:00Z",
+    "juno_position_km": [3600000, 1100000, -700000],
+    "atlas_position_km": [3620000, 1120000, -710000],
+    "relative_velocity_kms": 5.8,
+    "distance_at_closest_km": 20000,
+    "communication_delay_minutes": 44,
+    "expected_data": [
+      "High-resolution nucleus imagery",
+      "Spectral data of coma gases",
+      "Magnetic field readings",
+      "Dust particle analysis"
+    ],
+    "transmission_window": {
+      "start": "2026-03-15T00:00:00Z",
+      "end": "2026-04-01T00:00:00Z"
+    }
+  }
+}
